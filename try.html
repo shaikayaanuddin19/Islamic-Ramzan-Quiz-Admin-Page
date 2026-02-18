@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Islamic Ramzan Quiz - Admin Panel</title>
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background-color: #f4f6f9;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    background: #0d6efd;
+    color: white;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Topbar */
+.topbar {
+    background: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Card */
+.card {
+    border-radius: 10px;
+}
+
+/* Mobile Sidebar */
+@media(max-width:768px){
+    .sidebar {
+        height: auto;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- Sidebar -->
+<div class="col-md-2 sidebar p-3">
+    <h4 class="text-center">Admin Panel</h4>
+    <hr>
+    <a href="#">Dashboard</a>
+    <a href="#">Add Question</a>
+    <a href="#">Manage Questions</a>
+    <a href="#">Publish Quiz</a>
+    <a href="#">Leaderboard</a>
+    <a href="#">Users</a>
+    <a href="#">Certificates</a>
+    <a href="#">Ads & Pages</a>
+    <a href="#">Settings</a>
+    <a href="#">Logout</a>
+</div>
+
+<!-- Main Content -->
+<div class="col-md-10 p-0">
+
+<!-- Topbar -->
+<div class="topbar d-flex justify-content-between align-items-center">
+    <h5>Ramzan Quiz Admin Dashboard</h5>
+    <span class="badge bg-success">Logged In</span>
+</div>
+
+<div class="p-4">
+
+<!-- Dashboard Cards -->
+<div class="row g-3">
+    <div class="col-md-3 col-6">
+        <div class="card shadow p-3 text-center">
+            <h6>Total Users</h6>
+            <h4>1200</h4>
+        </div>
+    </div>
+    <div class="col-md-3 col-6">
+        <div class="card shadow p-3 text-center">
+            <h6>Today's Attempts</h6>
+            <h4>350</h4>
+        </div>
+    </div>
+    <div class="col-md-3 col-6">
+        <div class="card shadow p-3 text-center">
+            <h6>Quiz Status</h6>
+            <span class="badge bg-primary">Active</span>
+        </div>
+    </div>
+    <div class="col-md-3 col-6">
+        <div class="card shadow p-3 text-center">
+            <h6>Top Score</h6>
+            <h4>30/30</h4>
+        </div>
+    </div>
+</div>
+
+<hr class="my-4">
+
+<!-- Add Question Section -->
+<div class="card shadow p-4 mb-4">
+<h5>Add Question</h5>
+<form>
+<div class="row mb-3">
+    <div class="col-md-3">
+        <label class="form-label">Day Number</label>
+        <input type="number" class="form-control" min="1" max="30">
+    </div>
+    <div class="col-md-9">
+        <label class="form-label">Question (English / Urdu)</label>
+        <input type="text" class="form-control">
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <input type="text" class="form-control mb-2" placeholder="Option 1">
+        <input type="text" class="form-control mb-2" placeholder="Option 2">
+    </div>
+    <div class="col-md-6">
+        <input type="text" class="form-control mb-2" placeholder="Option 3">
+        <input type="text" class="form-control mb-2" placeholder="Option 4">
+    </div>
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Correct Answer</label>
+    <select class="form-select">
+        <option>Select Correct Option</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+    </select>
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Qur'an / Hadith Reference</label>
+    <input type="text" class="form-control">
+</div>
+
+<button class="btn btn-primary">Save Question</button>
+</form>
+</div>
+
+<!-- Leaderboard Section -->
+<div class="card shadow p-4 mb-4">
+<h5>Leaderboard</h5>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead class="table-primary">
+<tr>
+    <th>Rank</th>
+    <th>Name</th>
+    <th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1</td>
+    <td>Ahmed</td>
+    <td>30</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>Ali</td>
+    <td>28</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- Users Section -->
+<div class="card shadow p-4">
+<h5>User Management</h5>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+    <th>User ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>001</td>
+    <td>Ahmed Khan</td>
+    <td>ahmed@email.com</td>
+    <td>
+        <button class="btn btn-sm btn-danger">Block</button>
+    </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
