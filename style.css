@@ -4,7 +4,6 @@ body {
     background: #eef5f1;
 }
 
-/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
@@ -29,14 +28,12 @@ body {
     background: rgba(255,255,255,0.2);
 }
 
-/* Main Content */
 .main-content {
     margin-left: 250px;
     padding: 20px 30px;
     min-height: 100vh;
 }
 
-/* Topbar */
 .topbar {
     background: linear-gradient(90deg, #0d6efd, #198754);
     padding: 12px 20px;
@@ -45,7 +42,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Dashboard Cards */
+
 .dashboard-card {
     border: none;
     border-radius: 20px;
@@ -61,13 +58,13 @@ body {
 }
 
 
-/* Card */
+
 .card {
     border: none;
     border-radius: 20px;
 }
 
-/* Mobile */
+
 @media(max-width:768px){
     .sidebar {
         left: -250px;
@@ -81,3 +78,4 @@ body {
         margin-left: 0;
     }
 }
+
